@@ -15,8 +15,8 @@ module Pronto
     end
 
     def inspect(patch)
-      runner = SlimLint::Runner.new
-      lints = runner.run(files: [patch.new_file_full_path]).lints
+      runner = ::SlimLint::Runner.new
+      lints = runner.run(files: [patch.new_file_full_path.to_s]).lints
       lints.map do |lint|
         patch.added_lines.select { |line| line.new_lineno == lint.line }
           .map { |line| new_message(lint, line) }
