@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.author = 'Ibrahim Awwal'
   s.email = 'ibrahim.awwal@gmail.com'
-  s.homepage = 'http://github.org/ibrahima/pront-slim_lint'
+  s.homepage = 'http://github.org/ibrahima/pronto-slim_lint'
   s.summary = <<-EOF
     Pronto runner for Slim-lint, linting utility for Slim templates
   EOF
