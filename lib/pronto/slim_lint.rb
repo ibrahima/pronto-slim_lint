@@ -8,10 +8,10 @@ module Pronto
     def run
       return [] unless @patches
 
-      @patches.select { |patch| patch.additions > 0 }
-        .select { |patch| slim_file?(patch.new_file_full_path) }
-        .map { |patch| inspect(patch) }
-        .flatten.compact
+      @patches.select { |patch| patch.additions.positive? }
+              .select { |patch| slim_file?(patch.new_file_full_path) }
+              .map { |patch| inspect(patch) }
+              .flatten.compact
     end
 
     def inspect(patch)
@@ -19,7 +19,7 @@ module Pronto
       lints = runner.run(files: [patch.new_file_full_path.to_s]).lints
       lints.map do |lint|
         patch.added_lines.select { |line| line.new_lineno == lint.line }
-          .map { |line| new_message(lint, line) }
+             .map { |line| new_message(lint, line) }
       end
     end
 
