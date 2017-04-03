@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
 
   s.licenses = ['MIT']
   s.required_ruby_version = '>= 2.0.0'
-  s.rubygems_version = '1.8.23'
 
   s.files = `git ls-files`.split($RS).reject do |file|
     file =~ %r{^(?:
@@ -35,7 +34,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency('pronto', '~> 0.8.0')
-  s.add_dependency('slim_lint', '~> 0.11.0')
+  s.add_dependency('slim_lint', '~> 0.12.0')
   s.add_development_dependency('rake', '~> 11.0')
   s.add_development_dependency('rspec', '~> 3.4')
   s.add_development_dependency('rspec-its', '~> 1.2')
