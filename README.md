@@ -1,7 +1,6 @@
 # Pronto runner for Slim-lint
 
 [![Gem Version](https://badge.fury.io/rb/pronto-slim_lint.png)](http://badge.fury.io/rb/pronto-slim_lint)
-[![Dependency Status](https://gemnasium.com/ibrahima/pronto-slim_lint.png)](https://gemnasium.com/ibrahima/pronto-slim_lint)
 
 Pronto runner for [Slim-Lint](https://github.com/sds/slim-lint), linting utility for Slim templates. [What is Pronto?](https://github.com/mmozuras/pronto)
 
