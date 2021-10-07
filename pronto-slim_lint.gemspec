@@ -1,6 +1,6 @@
-# -*- encoding: utf-8 -*-
-#
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'pronto/slim_lint/version'
 require 'English'
 
@@ -11,12 +11,10 @@ Gem::Specification.new do |s|
   s.author = 'Ibrahim Awwal'
   s.email = 'ibrahim.awwal@gmail.com'
   s.homepage = 'https://github.com/ibrahima/pronto-slim_lint'
-  s.summary = <<-EOF
-    Pronto runner for Slim-lint, linting utility for Slim templates
-  EOF
+  s.summary = 'Pronto runner for Slim-lint, linting utility for Slim templates'
 
   s.licenses = ['MIT']
-  s.required_ruby_version = '>= 2.0.0'
+  s.required_ruby_version = '>= 2.3.0'
 
   s.files = `git ls-files`.split($RS).reject do |file|
     file =~ %r{^(?:
