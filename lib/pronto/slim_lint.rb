@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pronto'
 require 'slim_lint'
 require 'slim_lint/runner'
